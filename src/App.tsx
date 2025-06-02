@@ -1,7 +1,9 @@
+import { Main } from 'components';
+
 function App() {
   return (
     <>
-
+      <Main/>
     </>
   )
 }
