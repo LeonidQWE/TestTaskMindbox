@@ -1,0 +1,15 @@
+.btn {
+  font-size: clamp(1rem, 4vw, 1.6rem);
+  padding: clamp(0.3rem, 2vw, 0.8rem) clamp(0.5rem, 2vw, 1.5rem);
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.btn:hover {
+  transform: scale(1.1);
+}
+
+.selected {
+  border: 1px solid #000;
+  border-radius: 8px;
+}

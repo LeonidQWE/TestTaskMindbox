@@ -13,17 +13,11 @@ export const useTodo = (initialTodos: Todo[] = []) => {
     setTodos([...todos, newTodo]);
   }
 
-  // const deleteTodo = (id: string) => {
-  //   setTodos(todos.filter((todo) => todo.id !== id));
-  // }
-
   const toggleTodo = (id: string) => {
     setTodos(todos.map((todo) => {
       return todo.id === id ? {...todo, completed: !todo.completed} : {...todo};
     }))
   }
-
-  // const deleteAllTodos = () => setTodos([]);
 
   const resetCompletedTodos = () => setTodos(todos.filter((todo) => !todo.completed));
 
@@ -35,18 +29,17 @@ export const useTodo = (initialTodos: Todo[] = []) => {
     return todo;
   });
 
-  // const completedTodosCount = todos.filter((todo) => todo.completed).length;
+  const completedTodoCount = todos.filter((todo) => todo.completed).length;
   const activeTodoCount = todos.filter((todo) => !todo.completed).length;
 
   return {
     filteredTodos,
-    // completedTodosCount,
+    filter,
     activeTodoCount,
+    completedTodoCount,
     addTodo,
-    // deleteTodo,
     toggleTodo,
     setFilter,
-    // deleteAllTodos,
     resetCompletedTodos,
   };
 };

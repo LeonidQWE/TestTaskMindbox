@@ -25,7 +25,9 @@ describe('useTodo', () => {
 
     [
       'filteredTodos',
+      'filter',
       'activeTodoCount',
+      'completedTodoCount',
       'addTodo',
       'toggleTodo',
       'setFilter',
@@ -33,7 +35,9 @@ describe('useTodo', () => {
     ].forEach((prop) => expect(todoApi).toHaveProperty(prop));
 
     expect(Array.isArray(todoApi.filteredTodos)).toBe(true);
+    expect(typeof todoApi.filter).toBe('string');
     expect(typeof todoApi.activeTodoCount).toBe('number');
+    expect(typeof todoApi.completedTodoCount).toBe('number');
     functionProp.forEach((prop) => expect(typeof todoApi[prop]).toBe('function'));
   });
 
