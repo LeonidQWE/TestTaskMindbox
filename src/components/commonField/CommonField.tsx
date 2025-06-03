@@ -1,4 +1,4 @@
-import s from './CommonField.module.scss';
+import s from './CommonField.module.css';
 
 type CommonFieldProps = {
   value?: string;
