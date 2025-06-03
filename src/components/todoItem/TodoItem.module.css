@@ -1,0 +1,66 @@
+.todo {
+  width: 100%;
+  padding: clamp(0.5rem, 1vw, 1rem);
+  background-color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+.todo:not(:last-child) {
+  border-bottom: 1px solid #666262;
+}
+
+.checkbox {
+  display: none;
+}
+
+.customCheckbox {
+  display: inline-block;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  border: 2px solid #d9d1d1;
+  position: relative;
+  vertical-align: middle;
+  background: #fff;
+  transition: border-color 0.2s;
+}
+
+.customCheckbox::after {
+  content: '';
+  display: block;
+  position: absolute;
+  top: 4px;
+  left: 10px;
+  width: 7px;
+  height: 16px;
+  border: solid #d9d1d1;
+  border-width: 0 2px 2px 0;
+  transform: rotate(45deg);
+}
+
+.checkbox:checked + .customCheckbox {
+  border-color: #454343;
+}
+
+.checkbox:checked + .customCheckbox::after {
+  border-color: green;
+}
+
+.checkboxLabel {
+  cursor: pointer;
+  user-select: none;
+}
+
+.todoTitle {
+  margin: 0;
+  width: 100%;
+  font-size: clamp(1rem, 5vw, 2.5rem);
+}
+
+.todoTitleCompleted {
+  color: gray;
+  text-decoration: line-through;
+}

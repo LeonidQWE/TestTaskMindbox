@@ -1,6 +1,6 @@
+import { useTodo } from 'hooks/useTodo';
 import { Title, TodoForm } from 'components';
 import s from './Main.module.css';
-import { useTodo } from 'hooks/useTodo';
 
 export const Main = () => {
   const { addTodo } = useTodo();
