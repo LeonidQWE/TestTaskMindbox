@@ -19,7 +19,7 @@ export const Controls = ({
 }: TodosActionsProps) => {
   return (
     <div className={s.container} data-testid='controls'>
-      <p className={s.activeTodoCount}>{activeTodoCount} items left</p>
+      <p data-testid='activeTodoCount' className={s.activeTodoCount}>{activeTodoCount} items left</p>
 
       <div>
         <Button
