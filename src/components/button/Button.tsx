@@ -1,7 +1,7 @@
 import s from './Button.module.css';
 
 type ButtonProps = {
-  children: React.ReactNode,
+  children: string,
   onClick: () => void,
   title: string,
   disabled?: boolean,
